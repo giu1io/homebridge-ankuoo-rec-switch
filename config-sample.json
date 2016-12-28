@@ -1,0 +1,19 @@
+{
+	"bridge": {
+		"name": "Homebridge",
+		"username": "CC:22:3D:E3:CE:30",
+		"port": 51826,
+		"pin": "031-45-154"
+	},
+	"description": "This is an example configuration file to help you get set up with homebridge-ankuoo-rec-switch",
+	"accessories": [
+		{
+			"accessory": "AnkuooRecSwitch",
+			"name": "Switch number one",
+			"ip": "192.168.XXX.XXX",
+			"mac": "ac:cf:XX:XX:XX:XX",
+			"onCode": "9464c0499574484f04a29367XXXXXXXX", 
+			"offCode": "fd344f402a3f6299b53010XXXXXXXXXX"
+		}
+	]
+}

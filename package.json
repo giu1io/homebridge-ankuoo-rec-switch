@@ -1,0 +1,29 @@
+{
+	"name": "homebridge-ankuoo-rec-switch",
+	"version": "1.0.0",
+	"description": "Siri / HomeKit control of Ankuoo Rec Switches by way of homebridge.",
+	"main": "index.js",
+	"license": "GPL-3.0",
+	"homepage": "https://github.com/giu1io/homebridge-ankuoo-rec-switch",
+	"bugs": {
+		"url" : "https://github.com/giu1io/homebridge-ankuoo-rec-switch/issues"
+	},
+	"keywords": [
+		"ankuoo",
+		"siri",
+		"homebridge",
+		"homebridge-plugin"
+	],
+	"author": {
+		"name": "Giulio Montagner",
+		"url": "http://giuliomontagner.com"
+	},
+	"repository": {
+		"type" : "git",
+		"url" : "https://github.com/giu1io/homebridge-ankuoo-rec-switch.git"
+	},
+	"engines": {
+		"node": ">=6.9.2",
+		"homebridge": ">=0.4.16"
+	}
+}
