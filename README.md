@@ -19,7 +19,7 @@ All fields are required.To determine the onCode and offCode for your switch you 
 - `fd344f402a3f6299b530xxxxxxxxxxxx` <- encrypted payload, 16 bytes **this is your on/off code**.
 
 
-##Fields:
+## Fields:
 - `accessory`: Must be `AnkuooRecSwitch` (case sensitive)
 - `name` :: string :: What you want to call the switch. Keep in mind
   that Siri will prefer anything other than your homebridge switch if there's
@@ -28,16 +28,16 @@ All fields are required.To determine the onCode and offCode for your switch you 
 - `ip` :: string :: the ip address of your switch (use a static ip)
 - `onCode`, `offCode` :: string :: see instruction above on how to find your codes.
 
-#FAQ
+# FAQ
 
-##Can I use this plugin with more than one Ankuoo switch?
+## Can I use this plugin with more than one Ankuoo switch?
 In theory it should work, however I haven't tested it because I only own one switch. If you find any issues please let me know I will try to fix them.
 
-##The switch is 'on' but my iPhone says it's 'off' (or vice versa)
+## The switch is 'on' but my iPhone says it's 'off' (or vice versa)
 With the knowledge I have right now (see next question) there's is not a reliable way to determine the switch status. The plugin assumes that all your switches are off when you start homebridge, then uses broadcast packets sent by the switch to keep track of the on/off status. If one of this packets gets lost or if the switch was on when you started homebridge, then the status will be inconsistent. To fix this turn off your switch and then restart homebridge.
 
-##Why do I have to sniff the packets to find the on/off codes?
+## Why do I have to sniff the packets to find the on/off codes?
 The packet structure is known ([source](https://forum.fhem.de/index.php/topic,57612.msg504597.html#msg504597)), because it's basically the same for all the manufactures that use **yunext.com** as a platform. However, the AES 128bit key used to encrypt the payload it's not the same (["0123456789abcdef"](https://forum.fhem.de/index.php/topic,38112.msg309817.html#msg309817)). If you find the key used to encrypt the payload please let me know and I will gladly update my plugin to not require this codes anymore. I would even rewrite it as a platform so you have to only set username and password and it does the rest by itself.
 
-##I'm not convinced of your explanation...
+## I'm not convinced of your explanation...
 There is [a post on my blog](http://blog.giuliomontagner.com/post/155085663708/trying-to-hack-ankuoo-rec-switch-and-make-it) explaining everything that I have tried to get this to work. If you see something that I've missed, please let me know.
