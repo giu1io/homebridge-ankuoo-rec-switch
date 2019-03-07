@@ -1,6 +1,10 @@
 # homebridge-ankuoo-rec-switch
 [Homebridge](https://github.com/nfarina/homebridge/) plugin that integrates with Ankuoo Rec Switch
 
+# Update 2019-03-07
+
+The correct decryption key has been found by ljalves (see [this issue](https://github.com/giu1io/homebridge-ankuoo-rec-switch/issues/9)). If I can I will update the plugin to incorporate their work. In the meantime I advise you to [take a look to the custom firmware](https://github.com/ljalves/hfeasy) that they developed for the switch that includes additional functionality like MQTT. That would make for a better integration with homebridge if you decide to use it. 
+
 # Installation
 
 1. Install homebridge: `npm install -g homebridge`
